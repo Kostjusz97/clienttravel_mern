@@ -37,7 +37,7 @@ export const TagsPage = () => {
           key={obj._id}
           _id={obj._id}
           title={obj.title}
-          imageUrl={obj.imageUrl ? `http://localhost:4444${obj.imageUrl}`: ''}
+          imageUrl={obj.imageUrl ? `process.env.REACT_APP_API_URL${obj.imageUrl}`: ''}
           user={obj.user}
           createdAt={moment(obj.createdAt).format('YYYY-MM-DD HH:mm')}
           viewsCount={obj.viewsCount}
