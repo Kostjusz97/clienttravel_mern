@@ -47,7 +47,7 @@ export const Post = ({
   }
 
   return (
-    <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
+    <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })} onClick={onPostClick}>
       {isEditable && (
         <div className={styles.editButtons}>
           <Link to={`/posts/${_id}/edit`}>
@@ -67,7 +67,7 @@ export const Post = ({
           alt={title}
         />
       )}
-      <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })} onClick={onPostClick}>
+      <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
         <UserInfo {...user} additionalText={createdAt} />
         <div className={styles.indention}>
           <h2 className={clsx(styles.title, { [styles.titleFull]: isFullPost })}>
