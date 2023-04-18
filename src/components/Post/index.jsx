@@ -40,6 +40,12 @@ export const Post = ({
     }
   };
 
+  const onPostClick = () => {
+    if (!isFullPost) {
+      window.location.href = `/posts/${_id}`;
+    }
+  }
+
   return (
     <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
       {isEditable && (
